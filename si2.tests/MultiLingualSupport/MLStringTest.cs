@@ -1,7 +1,6 @@
-﻿using System;
+﻿using NUnit.Framework;
+using si2.bll.Helpers.MultiLingualSupport;
 using System.Collections.Generic;
-using NUnit.Framework;
-using si2.bll.MultiLingualSupport;
 
 namespace si2.tests.MultiLingualSupport
 {
