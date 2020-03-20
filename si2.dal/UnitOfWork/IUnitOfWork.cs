@@ -11,6 +11,8 @@ namespace si2.dal.UnitOfWork
     {
         IDataflowRepository Dataflows { get; }
 
+        IUniversityRepository Universities { get; }
+
         Task<int> SaveChangesAsync(CancellationToken ct);
 
         int SaveChanges();

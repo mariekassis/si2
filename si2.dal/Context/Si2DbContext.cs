@@ -21,6 +21,7 @@ namespace si2.dal.Context
 
         public DbSet<Dataflow> Dataflows { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
+		public DbSet<University> Universities { get; set; }
 
         public Si2DbContext(DbContextOptions<Si2DbContext> options) : base(options)
         {
