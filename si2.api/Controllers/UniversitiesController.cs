@@ -33,7 +33,7 @@ namespace si2.api.Controllers
             _universityService = universityService;
 		}
 
-        [HttpGet("{id}", Name = "GetUniversity")]
+        /*[HttpGet("{id}", Name = "GetUniversity")]
         [Authorize(AuthenticationSchemes = "Bearer")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UniversityDto))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -45,7 +45,18 @@ namespace si2.api.Controllers
                 return NotFound();
 
             return Ok(universityDto);
+
+        }*/
+
+        [HttpGet("{id}", Name = "GetUniversity")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UniversityDto))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> GetUniversity(Guid id, CancellationToken ct)
+        {
+
+            return Ok("Reached");
         }
+
 
         [HttpPost]
         [Authorize(AuthenticationSchemes = "Bearer")]
