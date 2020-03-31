@@ -165,7 +165,7 @@ namespace si2.api.Controllers
                     return _linkGenerator.GetUriByName(this.HttpContext, "GetUniversities",
                         new
                         {
-                            status = pagedResourceParameters.Name,
+                            /*name = pagedResourceParameters.Name*/
                             searchQuery = pagedResourceParameters.SearchQuery,
                             pageNumber = pagedResourceParameters.PageNumber - 1,
                             pageSize = pagedResourceParameters.PageSize
@@ -174,7 +174,7 @@ namespace si2.api.Controllers
                     return _linkGenerator.GetUriByName(this.HttpContext, "GetUniversities",
                         new
                         {
-                            status = pagedResourceParameters.Name,
+                            /*name = pagedResourceParameters.Name,*/
                             searchQuery = pagedResourceParameters.SearchQuery,
                             pageNumber = pagedResourceParameters.PageNumber + 1,
                             pageSize = pagedResourceParameters.PageSize
@@ -183,7 +183,7 @@ namespace si2.api.Controllers
                     return _linkGenerator.GetUriByName(this.HttpContext, "GetUniversities",
                        new
                        {
-                           status = pagedResourceParameters.Name,
+                           /*name = pagedResourceParameters.Name,*/
                            searchQuery = pagedResourceParameters.SearchQuery,
                            pageNumber = pagedResourceParameters.PageNumber,
                            pageSize = pagedResourceParameters.PageSize
