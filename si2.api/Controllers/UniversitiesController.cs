@@ -26,12 +26,6 @@ namespace si2.api.Controllers
         private readonly ILogger<UniversitiesController> _logger;
         private readonly IUniversityService _universityService;
 
-        /*
-         {
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYmNkXzEyM0Bob3RtYWlsLmNvbSIsImp0aSI6IjhjZjdmN2FlLTA0YzEtNDUxMC1hNzM1LTA3Yjg3Y2ZmZmZjYyIsInVuaXF1ZV9uYW1lIjoiYWJjZF8xMjNAaG90bWFpbC5jb20iLCJleHAiOjE1ODUyMjI5MDksImlzcyI6Ik1WUyIsImF1ZCI6IkFwaVVzZXIifQ.DfVpCHbUcvwfVqa-9FunHtn0KAkMGSQBBJefZbBecq4",
-            "expiration": "2020-03-26T11:41:49Z"
-        }*/
-
         public UniversitiesController(LinkGenerator linkGenerator, ILogger<UniversitiesController> logger, IUniversityService universityService)
 		{
             _linkGenerator = linkGenerator;

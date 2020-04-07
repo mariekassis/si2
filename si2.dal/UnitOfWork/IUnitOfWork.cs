@@ -13,6 +13,8 @@ namespace si2.dal.UnitOfWork
 
         IUniversityRepository Universities { get; }
 
+        IInstitutionRepository Institutions { get; }
+
         Task<int> SaveChangesAsync(CancellationToken ct);
 
         int SaveChanges();
