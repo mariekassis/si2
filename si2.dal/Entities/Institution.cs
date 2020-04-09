@@ -17,7 +17,7 @@ namespace si2.dal.Entities
         public string Name { get; set; }
 
         [Required]
-        public Guid universityId { get; set; }
+        public Guid UniversityId { get; set; }
 
         /*private string Name { get; set; }
         private string Code { get; set; }

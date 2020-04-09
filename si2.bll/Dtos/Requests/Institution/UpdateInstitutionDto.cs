@@ -11,6 +11,6 @@ namespace si2.bll.Dtos.Requests.Institution
         public string Code { get; set; }
         [Required]
         public string Name { get; set; }
-        public Guid universityId { get; set; }
+        public Guid UniversityId { get; set; }
     }
 }

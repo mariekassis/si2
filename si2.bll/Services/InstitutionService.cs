@@ -28,7 +28,7 @@ namespace si2.bll.Services
             try
             {
                 var institutionEntity = _mapper.Map<Institution>(createInstitutionDto);
-                institutionEntity.universityId = universityId;
+                institutionEntity.UniversityId = universityId;
                 await _uow.Institutions.AddAsync(institutionEntity, ct);
                 await _uow.SaveChangesAsync(ct);
                 institutionDto = _mapper.Map<InstitutionDto>(institutionEntity);

@@ -12,7 +12,7 @@ namespace si2.dal.Entities
 	{
 		[Required]
 		public string Name { get; set; }
-        private List<Institution> institutions;
+        /*private List<Institution> institutions;
 
         //public University(string code, string name)
         public University(string name)
@@ -23,14 +23,14 @@ namespace si2.dal.Entities
             }
             this.code = code;*/
 
-            if (name == null)
+            /*if (name == null)
             {
                 throw new Exception("University name can't be null");
             }
 
             this.Name = name;
             institutions = new List<Institution>();
-        }
+        }*/
 
     }
 }

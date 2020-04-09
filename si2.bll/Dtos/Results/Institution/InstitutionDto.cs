@@ -9,6 +9,6 @@ namespace si2.bll.Dtos.Results.Institution
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
-        public Guid universityId { get; set; }
+        public Guid UniversityId { get; set; }
     }
 }
