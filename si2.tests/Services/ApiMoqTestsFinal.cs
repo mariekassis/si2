@@ -174,6 +174,22 @@ namespace si2.tests.Services
             Assert.That(expected, Is.EqualTo(mockAllUniversityDto));
         }
 
+        [Test]
+        [Ignore("Test if it was deleted")]
+        public void Delete_University()
+        {
+            //Arrange
+            _mockUnitOfWork.Setup(_mockUnitOfWork => _mockUnitOfWork.Universities.DeleteAsync(mockUniversity, It.IsAny<CancellationToken>()));
+
+            //Act
+            var expected = _universityService.DeleteUniversityByIdAsync(mockUniversityDto.Id, It.IsAny<CancellationToken>());
+
+            //Assert
+            Assert.That(mockUniversityDto, Is.Null);
+
+                
+        }
+
         [OneTimeTearDown]
         public void OnTimeTearDown()
         {
