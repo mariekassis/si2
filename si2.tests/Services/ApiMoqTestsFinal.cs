@@ -119,7 +119,7 @@ namespace si2.tests.Services
             _mockUnitOfWork.Setup(_mockUnitOfWork => _mockUnitOfWork.Universities.GetAsync(mockUniversityDto.Id, It.IsAny<CancellationToken>())).Returns(Task.FromResult(mockUniversity));
 
             // Act
-            var expected = _universityService.GetUniversityByIdAsync(mockUniversityDto.Id, It.IsAny<CancellationToken>()).Result;
+            var expected = _universityService.GetUniversityByIdAsync(mockUniversityDto.Id, It.IsAny<CancellationToken>()).Result; 
 
 
             // Assert
