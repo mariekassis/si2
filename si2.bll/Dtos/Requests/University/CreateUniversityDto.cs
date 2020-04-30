@@ -10,5 +10,11 @@ namespace si2.bll.Dtos.Requests.University
         [Required]
         public string Name { get; set; }
 
+        public override bool Equals(Object obj) => Equals(obj as CreateUniversityDto);
+
+        public bool Equals(CreateUniversityDto obj)
+        {
+            return (string.Equals(this.Name, obj.Name, StringComparison.OrdinalIgnoreCase));
+        }
     }
 }

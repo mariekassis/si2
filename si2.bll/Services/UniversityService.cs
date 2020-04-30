@@ -79,10 +79,16 @@ namespace si2.bll.Services
         {
             UniversityDto universityDto = null;
 
-            var universityEntity = await _uow.Universities.GetAsync(id, ct);
-            if (universityEntity != null)
+            if (_uow != null)
             {
-                universityDto = _mapper.Map<UniversityDto>(universityEntity);
+                if (_uow.Universities != null)
+                {
+                    var universityEntity = await _uow.Universities.GetAsync(id, ct);
+                    if (universityEntity != null)
+                    {
+                        universityDto = _mapper.Map<UniversityDto>(universityEntity);
+                    }
+                }
             }
 
             return universityDto;
