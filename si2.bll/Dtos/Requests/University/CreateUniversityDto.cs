@@ -7,7 +7,8 @@ namespace si2.bll.Dtos.Requests.University
 {
     public class CreateUniversityDto
     {
-        [Required]
+        [Required(ErrorMessage="Name can't be null")]
+        [StringLength(50, ErrorMessage = "Name cannot be longer than 50 characters.")]
         public string Name { get; set; }
 
         public override bool Equals(Object obj) => Equals(obj as CreateUniversityDto);
