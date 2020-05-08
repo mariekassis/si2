@@ -18,6 +18,7 @@ using si2.dal.Repositories;
 using si2.dal.UnitOfWork;
 using System;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace si2.api
 {
@@ -107,6 +108,25 @@ namespace si2.api
                     }
                 });
             });
+
+            //Add claim authorization
+            services.AddAuthorization(options => {
+                options.AddPolicy("FullControlPolicy", policy => policy.RequireClaim("FullControl Role"));
+            });
+
+
+
+            /*services.ConfigureApplicationCookie(options =>
+            {
+                options.Events.OnRedirectToAccessDenied = context =>
+                {
+                    context.Response.Headers["Location"] = context.RedirectUri;
+                    context.Response.StatusCode = 401;
+                    return Task.CompletedTask;
+                };
+                
+            });*/
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -44,7 +44,7 @@ namespace si2.api.Controllers
 
             if (result.Succeeded)
             {
-                await _signInManager.SignInAsync(user, isPersistent: false);
+                await _signInManager.SignInAsync(user, isPersistent: false); //isPersistent: false => we only want to save the user info till the session end and not on the server
                 return Ok();
             }
 
