@@ -9,7 +9,7 @@ namespace si2.bll.Dtos.Results.Institution
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        [StringLength(3, ErrorMessage = "Code cannot be longer than 3 characters.")]
+        [StringLength(3, ErrorMessage = "Code can't be longer than 3 characters.")]
         public string Code { get; set; }
         public Guid UniversityId { get; set; }
     }
