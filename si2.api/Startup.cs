@@ -60,11 +60,17 @@ namespace si2.api
             services.AddTransient<IDataflowRepository, DataflowRepository>();
             services.AddTransient<IUniversityRepository, UniversityRepository>();
             services.AddTransient<IInstitutionRepository, InstitutionRepository>();
+            services.AddTransient<IBookRepository, BookRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IBookCategoryRepository, BookCategoryRepository>();
 
             services.AddTransient<IServiceBase, ServiceBase>();
             services.AddTransient<IDataflowService, DataflowService>();
             services.AddTransient<IUniversityService, UniversityService>();
             services.AddTransient<IInstitutionService, InstitutionService>();
+            services.AddTransient<IBookService, BookService>();
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<IBookCategoryService, BookCategoryService>();
 
             // Auto Mapper Configurations
             var mappingConfig = new MapperConfiguration(mc => { mc.AddProfile(new MappingProfile()); });

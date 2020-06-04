@@ -7,6 +7,10 @@ using si2.bll.Dtos.Requests.Institution;
 using si2.bll.Dtos.Results.Institution;
 using si2.bll.Helpers.PagedList;
 using si2.dal.Entities;
+using si2.bll.Dtos.Requests.Book;
+using si2.bll.Dtos.Results.Book;
+using si2.bll.Dtos.Requests.Category;
+using si2.bll.Dtos.Results.Category;
 
 namespace si2.bll.Helpers
 {
@@ -30,6 +34,18 @@ namespace si2.bll.Helpers
             CreateMap<UpdateInstitutionDto, Institution>();
             CreateMap<Institution, InstitutionDto>();
             CreateMap<Institution, UpdateInstitutionDto>();
+
+            //Mapping Book Object
+            CreateMap<CreateBookDto, Book>();
+            CreateMap<UpdateBookDto, Book>();
+            CreateMap<Book, BookDto>();
+            CreateMap<Book, UpdateBookDto>();
+
+            //Mapping Category Object
+            CreateMap<CreateCategoryDto, Category>();
+            CreateMap<UpdateCategoryDto, Category>();
+            CreateMap<Category, CategoryDto>();
+            CreateMap<Category, UpdateCategoryDto>();
         }
     }
 }

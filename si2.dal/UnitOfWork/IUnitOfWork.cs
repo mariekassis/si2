@@ -15,6 +15,12 @@ namespace si2.dal.UnitOfWork
 
         IInstitutionRepository Institutions { get; }
 
+        IBookRepository Books { get; }
+
+        ICategoryRepository Categories { get; }
+
+        IBookCategoryRepository BookCategories { get; }
+
         Task<int> SaveChangesAsync(CancellationToken ct);
 
         int SaveChanges();

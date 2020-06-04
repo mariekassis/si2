@@ -24,6 +24,10 @@ namespace si2.dal.Context
 		public DbSet<University> Universities { get; set; }
 		public DbSet<Institution> Institutions { get; set; }
 
+		public DbSet<Book> Books { get; set; }
+		public DbSet<Category> Categories { get; set; }
+		public DbSet<BookCategory> BookCategory { get; set; }
+
 		public Si2DbContext(DbContextOptions<Si2DbContext> options) : base(options)
         {
             _httpContextAccessor = this.GetService<IHttpContextAccessor>();
@@ -39,11 +43,13 @@ namespace si2.dal.Context
         {
             base.OnModelCreating(builder);
 
-            // Customize the ASP.NET Identity model and override the defaults if needed.
-            // For example, you can rename the ASP.NET Identity table names and more.
-            // Add your customizations after calling base.OnModelCreating(builder);
-            // seed the database with dummy data
-        }
+			// Customize the ASP.NET Identity model and override the defaults if needed.
+			// For example, you can rename the ASP.NET Identity table names and more.
+			// Add your customizations after calling base.OnModelCreating(builder);
+			// seed the database with dummy data
+
+			builder.Entity<BookCategory>().HasKey(bc => new { bc.BookId, bc.CategoryId });
+		}
 
 		public override int SaveChanges()
 		{

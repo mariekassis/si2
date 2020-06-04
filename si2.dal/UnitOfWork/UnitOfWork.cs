@@ -25,6 +25,10 @@ namespace si2.dal.UnitOfWork
         public IDataflowRepository Dataflows => _serviceProvider.GetService<IDataflowRepository>();
         public IUniversityRepository Universities => _serviceProvider.GetService<IUniversityRepository>();
         public IInstitutionRepository Institutions => _serviceProvider.GetService<IInstitutionRepository>();
+        public IBookRepository Books => _serviceProvider.GetService<IBookRepository>();
+        public ICategoryRepository Categories => _serviceProvider.GetService<ICategoryRepository>();
+
+        public IBookCategoryRepository BookCategories => _serviceProvider.GetService<IBookCategoryRepository>();
 
         public async Task<int> SaveChangesAsync(CancellationToken ct)
         {
