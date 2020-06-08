@@ -55,7 +55,6 @@ namespace si2.api.Controllers
             return Ok(bookDto);
 
             //return Ok("Reached");
-            //return Ok("Reached");;
         }
 
         [Route("api/books")]
