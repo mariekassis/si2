@@ -353,5 +353,5 @@ MigrationBackup/
 .ionide/
 
 # Appsettings json file
-/si2.api/appsettings.json
+**/si2.api/appsettings.json
 
