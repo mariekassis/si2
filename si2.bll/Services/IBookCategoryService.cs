@@ -10,5 +10,6 @@ namespace si2.bll.Services
     public interface IBookCategoryService : IServiceBase
     {
         Task<BookCategory> CreateBookCategoryAsync(Guid bookId, Guid categoryId, CancellationToken ct);
+        Task<BookCategory> GetBookCategoryByIdAsync(Guid bookId, CancellationToken ct);
     }
 }

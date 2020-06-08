@@ -34,5 +34,25 @@ namespace si2.bll.Services
             return bookCategoryEntity;
         }
 
+        public async Task<BookCategory> GetBookCategoryByIdAsync(Guid id, CancellationToken ct)
+        {
+            BookCategory bookCategory = null;
+
+            if (_uow != null)
+            {
+                if (_uow.BookCategories != null)
+                {
+                    var bookCategoryEntity = await _uow.BookCategories.GetAsync(id, ct);
+                    if (bookCategoryEntity != null)
+                    {
+                        //bookDto = _mapper.Map<BookDto>(bookEntity);
+                        bookCategory = bookCategoryEntity;
+                    }
+                }
+            }
+
+            return bookCategory;
+        }
+
     }
 }

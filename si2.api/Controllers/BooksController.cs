@@ -88,5 +88,17 @@ namespace si2.api.Controllers
             return Ok();
         }
 
+        [Route("api/books/{bookId}/categories")]
+        [HttpGet]
+        [Authorize(AuthenticationSchemes = "Bearer")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        //[ProducesResponseType(StatusCodes.Status201Created, Type = typeof(BookDto))]
+        public async Task<ActionResult> GetCategoriesOfBook(Guid bookId, CancellationToken ct)
+        {
+            await _bookCategoryService.GetBookCategoryByIdAsync(bookId, ct);
+
+            return Ok();
+        }
+
     }
 }
